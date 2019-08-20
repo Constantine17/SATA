@@ -50,7 +50,7 @@ namespace SATA.Controllers
                 {
                     var e = email.Value as string;
                     if (Regex.IsMatch(e , Static.RegexEmail))
-                        customers = from c in _context.Customer
+                        customers = from c in customers
                                     where c.Email == e
                                     select c;
                     else 
